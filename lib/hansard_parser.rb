@@ -118,7 +118,7 @@ class HansardParser
   def hansard_day_on_date(date, house)
     # Load the XML data
     origxml_path = xml_path("orig", date, house)
-    if use_stored and File.size?(origxml_path)
+    if File.size?(origxml_path)
       xml = File.read(origxml_path)
     else
       xml = hansard_xml_source_data_on_date(date, house)
